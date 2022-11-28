@@ -76,4 +76,47 @@
 
 ## 25
 
-Display → Layers → Create Layer from Selected
+- Display → Layers → Create Layer from Selected
+
+## 26
+
+- Ctrl + 1 : Show → Isolate Select → View Selected
+
+커브에 포인트 추가
+
+1. Curve Point (Add Point)
+1. Curves → Inset Knot
+
+커브 연장
+
+1. Curves → Add Points Tool
+
+- Curves → Rebuild
+- Edit Mesh → Detach
+- Mesh → Separate
+- Multi-Cut → Slice Tool → Extract Faces
+
+## 27
+
+- Multi-Cut → Ctrl + Mouse Left
+
+## 28
+
+- FX → nCloth → Create Passive Collider / Create nCloth
+
+## 29
+
+- Mesh → Reduce
+- Ctrl + Del : Edit Mesh → Delete Edge/Vertex
+
+## 31
+
+- b → b + Mouse Middle
+- nConstraint → Transform Constraint
+- s : 키프레임 생성 후 적용
+- nCloth1(Outliner) → Attribute Editor → nClothShape1 → Collisions → Thickness → Self Collision Flag → Full Surface
+
+## 32
+
+- Modify → Align Tool
+- Modify → Snap Align Objects
