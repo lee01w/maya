@@ -31,11 +31,15 @@
 
 - Edit → Delete by Type → History (Alt + Shift + D)
 
+### 13
+
+Create → Type
+
 ### 14
 
 - f / Shift + f / a / Shift + a
-- Merge
-- Append to Polygon
+- Edit Mesh → Merge
+- Mesh Tools → Append to Polygon : Edge 선택해서 Face로 메꿈
 
 ### 15
 
@@ -71,8 +75,11 @@
 
 ### 23
 
-- Isoparm(Mouse Right) → Curves(Menu Set) → Duplicate Surface Curves
-- Curves(Menu Set) → Attach / Detach
+- Isoparm(Mouse Right) → Curves(Menu Set) → Duplicate Surface Curves : 면에서 선을 뽑아주는 기능
+
+### 24
+
+- Curves(Menu Set) → Attach / Detach : 여러 커브를 합치거나 분리 (커브의 방향 주의)
 - Curves(Menu Set) → Open/Close
 - Surfaces(Menu Set) → Insert Isoparms
 
@@ -86,21 +93,26 @@
 
 커브에 포인트 추가
 
-1. Curve Point (Add Point)
-1. Curves → Inset Knot
+1. Curve Point (Mouse Right Menu)
+1. Curves (Menu Set) → Inset Knot
 
 커브 연장
 
 1. Curves → Add Points Tool
 
-- Curves → Rebuild
-- Edit Mesh → Detach
-- Mesh → Separate
-- Multi-Cut → Slice Tool → Extract Faces
+- Curves → Rebuild (Option : Number of spans) : 커브의 포인트를 늘이거나 줄임
+
+```text
+분리의 기준이 될 Edge 선택 후 분리
+1. Edit Mesh → Detach : 분리의 기준이 될 Edge 선택 후 분리
+2. Mesh → Separate
+```
+
+- Multi-Cut → Slice Tool → Extract Faces : 마우스 드레그로 폴리곤을 절단
 
 ### 27
 
-- Multi-Cut → Ctrl + Mouse Left
+- Multi-Cut → Ctrl + Mouse Left : 폴리곤에 한 바퀴 돌아가 있는 엣지 추가
 
 ### 28
 
@@ -108,7 +120,7 @@
 
 ### 29
 
-- Mesh → Reduce
+- Mesh → Reduce : 원하는 형태를 얻을 수 없음
 - Ctrl + Del : Edit Mesh → Delete Edge/Vertex
 
 ### 31
@@ -121,7 +133,7 @@
 ### 32
 
 - Modify → Align Tool
-- Modify → Snap Align Objects
+- Modify → Snap Align Objects → Align Objects (Option에서 설정)
 
 ### 34
 
@@ -137,7 +149,7 @@ Outliner → Display → DAG Object Only
 
 ### 41
 
-Modify(Menu Set) → Freeze Transformations
+Modify(Menu Set) → Freeze Transformations : 형태는 유지하면서 트렌스폼 값을 초기화
 
 ### 42
 
@@ -154,7 +166,7 @@ Modify(Menu Set) → Freeze Transformations
 
 ### 50
 
-- Deform → Nonlinear
+- Deform → Nonlinear → Bend
 - Surface Shader → Out Color → File1 → place2dTexture1
 
 ### 51
@@ -192,3 +204,50 @@ UV Editor
 ### 54
 
 - UV → Planer : 원하는 축으로 평면의 UV 펼침 (키보드 맵핑)
+
+### 56
+
+- Edit Mesh → Add Divisions : 선택한 Face에 Subdivision 추가
+- Sculpting → Lift a surface (b + Left Mouse Drag : 브러시 사이즈 조정, m + Left Mouse Drag : 브러시 깊이 조정, Ctrl + Left Mouse Drag : 표면을 밀어 넣음, Shift + Left Mouse Drag : 면을 부드럽게 해줌)
+
+### 58
+
+- UV → Planar → (Option) Project from : 평평한 오브젝트의 UV를 펼칠때 사용
+
+```text
+UV Automatic을 크기에 비례하도록
+1. Modify(Menu Set) → Freeze Transformations : 형태는 유지하면서 트렌스폼 값을 초기화
+2. UV → Automatic
+```
+
+- UV로 적용된 파일의 place2dTecture에서 Repeat UV 수치를 조정하여 UV의 사이즈와 반복 조정 (Mirror U, Mirror v를 체크하여 이미지 연결부위 대칭으로 맞춰줌)
+
+### 59
+
+- Maya Texture의 Grid 같은 파일이 UV로 적용된다면 place2dTecture에서 Stagger를 체크하면 어긋난 페턴을 얻을 수 있음
+
+## Light
+
+### 61
+
+- Ambient Light : 멀리 있는 태양을 표현 (구석이 너무 어두워 최소한의 빛을 주고자 할때 : Ambient Light → 낮은 Intensity, 낮은 Ambient Shade)
+- Point Light → (Option) Decay Rate : 거리에 따른 감쇠
+- Spot Light → (Option) Penumbra Angle : 경계를 뭉게줌
+- Spot Light → (Option) Dropoff : 중심에서 경계까지 밝기를 조정
+
+### 62
+
+- Render Settings → Maya Software → Raytracing Quality → Raytracing 체크
+
+Ambient Light
+
+- Ambient Light에 그림자 주기 : Ambient Light → Raytrace Shadow Attributes → Use Ray Trace Shadows
+- Ambient Light → Raytrace Shadow Attributes → Shadow Radius
+- Ambient Light → Raytrace Shadow Attributes → Shadow Rays
+- Ambient Light → Raytrace Shadow Attributes → Ray Depth Limit : 그림자를 계산하는 횟수
+
+Ambient Light를 제외한 Light
+
+- Depth Map Shadows : 이미지를 이용해서 간단하게 그림자를 만들어 줌, 정확도는 떨어지고 속도는 빠름
+- Raytrace Shadow Attributes → Light Angle
+- Raytrace Shadow Attributes → Shadow Rays
