@@ -235,6 +235,8 @@ UV Automatic을 크기에 비례하도록
 - Spot Light → (Option) Penumbra Angle : 경계를 뭉게줌
 - Spot Light → (Option) Dropoff : 중심에서 경계까지 밝기를 조정
 
+- (Option) Emit Diffuse : 가시광선이 없어져서 오브젝트의 색이 표현이 안됨
+
 ### 62
 
 - Render Settings → Maya Software → Raytracing Quality → Raytracing 체크
@@ -251,3 +253,22 @@ Ambient Light를 제외한 Light
 - Depth Map Shadows : 이미지를 이용해서 간단하게 그림자를 만들어 줌, 정확도는 떨어지고 속도는 빠름
 - Raytrace Shadow Attributes → Light Angle
 - Raytrace Shadow Attributes → Shadow Rays
+
+### 63
+
+- windows → Settings/Preferences → Plug-in Manager → (search) mtoa.mll : Arnold 활성화
+
+### 67
+
+- Render Settings → Arnold Renderer → (Option) Camera (AA) : 노이즈가 있을 경우 이 값을 올려줌
+- Rendering (Switch Menu Set) → Render (Menu Set) → Render Sequence (Arnold) / Batch Render (Maya Software, Arnold는 라이센스 문제로 불가능)
+- Camera → Attribute Editor → Output Settings → (Option) Renderable
+
+### 68
+
+- 3D Texture가 적용된 오브젝트를 Material과 오브젝트를 같이 선택하고 Hypershade → Edit → Convert to File Tecture : 이미지 Texture로 적용
+
+### 70
+
+- UV Editor → Tools → Lattice : UV 격자 변경
+- Mesh → Transfer Attributes → (Option) UV Sets-Current, Sample space-Component : 동일 오브젝트들에서 가공된 UV를 다른 오브젝트에 적용
