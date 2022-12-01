@@ -272,3 +272,24 @@ Ambient Light를 제외한 Light
 
 - UV Editor → Tools → Lattice : UV 격자 변경
 - Mesh → Transfer Attributes → (Option) UV Sets-Current, Sample space-Component : 동일 오브젝트들에서 가공된 UV를 다른 오브젝트에 적용
+
+### 74
+
+UV 조절
+
+- UV → Planar → (Option) Keep image width/height ratio
+
+1. UV Editor → Cut/Sew → Cut
+1. UV Editor → Cut/Sew → Move and Sew
+
+- UV Editor → UV Toolkit → Transform → Texel Density : UV 비율 맞추기
+
+### 76
+
+투명한 오브젝트 굴절
+
+- blinn → Raytrace Options → Refractions
+- blinn → Raytrace Options → Refractive Index (오브젝트에 맞는 굴절률 적용)
+- blinn → Raytrace Options → Refraction Limit (굴절 횟수)
+
+- aiStandardDurface → IOR (굴절률)
