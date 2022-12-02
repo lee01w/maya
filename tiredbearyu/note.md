@@ -293,3 +293,34 @@ UV 조절
 - blinn → Raytrace Options → Refraction Limit (굴절 횟수)
 
 - aiStandardDurface → IOR (굴절률)
+
+### 78
+
+카메라 각도와 투명 오브젝트의 노말과 Dot Product로 투명도 개선 1
+
+- Create Render Node → Utilities → Sample Info → → → Connection Editor → facingRatio (Select) → trandmissionColor (R G B → Select)
+
+카메라 각도와 투명 오브젝트의 노말과 Dot Product로 투명도 개선 2
+
+- Create Render Node → Ramp → Create Render Node → Utilities → Sample Info → → → Connection Editor → facingRatio (Select) → uvCoord → vCoord
+
+### 80
+
+Blinn
+
+- Translucence : 반투명도, 빛이 투과하며 밝아짐
+- Incandescence : 발광 (실제 빛을 내지 않음)
+- Special Effects → Glow Intendity
+
+### 81
+
+aiStandardSurface
+
+- Shape → Arnold → Qpaque (Uncheck) : 완벽히 투명하게 빛 투과가 가능하게 함
+- Emission : 발광
+- Intensity
+- Exposure : 빛을 강하게 함
+
+### 82
+
+- Shape → Arnold → Arnold Translator → mech-light : 오브젝트가 라이트 오브젝트로 변함
