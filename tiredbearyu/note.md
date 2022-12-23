@@ -324,3 +324,26 @@ aiStandardSurface
 ### 82
 
 - Shape → Arnold → Arnold Translator → mech-light : 오브젝트가 라이트 오브젝트로 변함
+
+## Rigging
+
+### 83 팔 리깅 (Youtube: Hc2rfYC4AQY)
+
+1. Skeleton → Create IK Handle → Rotate-Plan Solver
+1. Create → Locator
+1. ikHandle1, locator1 선택 → Constrain → Pole Vector
+
+#### 손을 쥐는 동작
+
+1. Channel Box → Edit → Add Attribute → Long name: grap, Minimul: -2, Maximum: 10, Default: 0
+1. Animation (Menu sets) → Key → Set Driven Key → Set
+1. Set Driven Key (Panel) → Handle 선택 → Load Driver → Select Hierarchy (필요없는 부분 선택 해제) → Load Driven → Driver의 핸들 Grap, Driven의 Joint의 Rotate Z(해당 축 선택) → 핸들 Grap 수치조정, Joint의 Rotate Z 조정 → Key
+
+### 84 Bind Skin (Youtube: AugzSaHKf1w)
+
+1. Mouse Right BTN → Paint → skinCluster → skinCluster1-paintWeights (Skin → Paint Skin Weights)
+1. Skin → Mirror Skin Weights
+
+### 85 Rig Body
+
+- Handle → Channel Box에서 Rotate X(해당 축 선택) → Edit → Expressions...
