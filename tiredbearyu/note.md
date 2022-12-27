@@ -347,3 +347,8 @@ aiStandardSurface
 ### 85 Rig Body
 
 - Handle → Channel Box에서 Rotate X(해당 축 선택) → Edit → Expressions...
+
+### 86 Rig Leg
+
+- Handle → Channel Box → Edit → Add Attribute
+- Windows → General Editors → Connection Editors → Handle 선택 → Reload Left → Pivot이 설정된 Group 선택 → Reload Right
